@@ -1,0 +1,65 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Vully</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <style>
+    html { height: 100%; }
+    body {margin: 0; width: 100%; height: 90%; overflow:hidden; }
+    .mapContainer { width: 100%; height: 100%; overflow:hidden; }
+    .red { background-color: #f00; }
+  </style>
+  <script src="js/mapviewer.min.js"></script>
+</head>
+
+<body>
+  <!-- Map container: the map will be displayed in this div. -->
+  <div
+    class="mapContainer"
+    data-map-url="http://a.tile2.opencyclemap.org/cycle/$scale/$x/$y.png"
+    data-map-initialLocation="{x:0.5196805836511373,y:0.351942668793237,scale:0.0006470628556339841}"
+    data-map-onLocationChange="showLocation"
+  >
+ 
+    <!-- Show a string somewhere close to vully -->
+    <div data-map-pos=".5196,.3519">Bienvenue à Vully</div>
+
+    <!-- Show the string "Centered Test" in the middle of the world.
+         The center of the string is pinned to a fixed place. -->
+    <div data-map-pos=".5,.5" data-map-anchor=".5,.5">Centered Test</div>
+
+    <!-- Draw a red rectangle over the antarctic -->
+    <div class="red"
+      data-map-pos=".3,.8"
+      data-map-width=".3"
+      data-map-height=".1"
+      ></div>
+  </div>
+
+  <!-- Debug footer: Show location information under the map. -->
+  <div class="footer">
+    Location:<span id="location"></span>
+    Mouse: <span id="mousePos"></span>
+  </div>
+  <script>
+    var initialized = false;
+    function showLocation(canvasTileRenderer) {
+      var location = canvasTileRenderer.location;
+      var element = document.getElementById("location");
+      element.innerHTML =
+        "{x:" + location.x + ",y:" + location.y + ",scale:" + location.scale+"}";
+      if (!initialized) { initMouseClicInfo(canvasTileRenderer); }
+    }
+    function initMouseClicInfo(canvasTileRenderer) {
+      window.addEventListener("mousedown", function(event) {
+        var viewerPos = Utils.eventPosInElementCoordinates(
+            event, canvasTileRenderer.canvas);
+        var worldPos = canvasTileRenderer.pinchZoom.worldPosFromViewerPos(viewerPos);
+        var element = document.getElementById("mousePos");
+        element.innerHTML = "x:" + worldPos.x + ", y:" + worldPos.y;
+      }, false);
+    }
+  </script>
+</body>
+</html>
