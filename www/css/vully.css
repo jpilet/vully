@@ -1,2 +1,17 @@
 /* CSS for Vully web site. Julien Pilet + Antoine Javet, 2014. */
 
+section {
+  background-color: #522;
+  position: absolute;
+  display: none;
+
+  width: 50%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+}
+
+section.selectedSection {
+  display: block;
+}
+
