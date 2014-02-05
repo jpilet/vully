@@ -1,18 +1,85 @@
 /* CSS for Vully web site. Julien Pilet + Antoine Javet, 2014. */
 
+/* fonts */
+@font-face {
+    font-family: 'AJensonProLt';
+    font-style: normal;
+    src: url('AJensonPro-Lt.otf')
+}
+
+@font-face {
+    font-family: 'AJensonProLtIt';
+    font-style: normal;
+    src: url('AJensonPro-LtIt.otf')
+}
+
+@font-face {
+    font-family: 'AJensonProSemibold';
+    font-style: normal;
+    src: url('AJensonPro-Semibold.otf')
+}
+
+@font-face {
+    font-family: 'AJensonProSemiboldIt';
+    font-style: normal;
+    src: url('AJensonPro-SemiboldIt.otf')
+}
+
 section {
   color: #fff;
   background-color: #522A42;
   position: absolute;
   display: none;
 
-  width: 50%;
-  height: 80%;
+  width: 40ex;
+  height: 60%;
   top: 10%;
   left: 10%;
+
+  padding: 4ex;
+  text-align: left;
+  font-family: "AJensonProLt";
+
 }
 
 section.selectedSection {
   display: block;
 }
 
+div.mapContainer {
+  position: relative;
+}
+
+h1 {
+  font-family: "AJensonProSemibold";
+  font-size: 15pt;
+}
+
+.separatorBottom {
+  border-style: dotted;
+  border-width: 0px 0px 1px 0px;
+}
+
+.separatorTop {
+  padding-top: 4px;
+  margin-top: 4px;
+  border-style: dotted;
+  border-width: 1px 0px 0px 0px;
+  display: block;
+}
+
+a { text-decoration:none; }
+a:link {color:#fff;}      /* unvisited link */
+a:visited {color:#fee;}  /* visited link */
+
+article header {
+  font-family: "AJensonProSemibold";
+  font-size: 15pt;
+}
+
+article {
+  padding-top: 2ex;
+  padding-bottom: 1ex;
+  border-style: dotted;
+  border-width: 1px 0px 1px 0px;
+}
