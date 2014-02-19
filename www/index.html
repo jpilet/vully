@@ -90,7 +90,7 @@
             event, canvasTileRenderer.canvas);
         var worldPos = canvasTileRenderer.pinchZoom.worldPosFromViewerPos(viewerPos);
         var element = document.getElementById("mousePos");
-        element.innerHTML = "x:" + worldPos.x + ", y:" + worldPos.y;
+        element.innerHTML = "" + worldPos.x + "," + worldPos.y;
       }, false);
     }
   </script>
