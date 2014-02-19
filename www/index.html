@@ -80,7 +80,8 @@
       if (!initialized) { initMouseClicInfo(canvasTileRenderer); }
     }
     function initMouseClicInfo(canvasTileRenderer) {
-      window.addEventListener("mousedown", function(event) {
+      var container = document.getElementsByClassName("mapContainer")[0];
+      container.addEventListener("mousedown", function(event) {
         var viewerPos = Utils.eventPosInElementCoordinates(
             event, canvasTileRenderer.canvas);
         var worldPos = canvasTileRenderer.pinchZoom.worldPosFromViewerPos(viewerPos);
