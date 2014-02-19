@@ -75,16 +75,22 @@ a:visited {color:#fee;}  /* visited link */
 article header {
   font-family: "AJensonProSemibold";
   font-size: 15pt;
+  border-style: dotted;
+  border-width: 1px 0px 0px 0px;
+  padding-top: 2ex;
 }
 
 article {
-  padding-top: 2ex;
   padding-bottom: 1ex;
   border-style: dotted;
-  border-width: 1px 0px 1px 0px;
+  border-width: 0px 0px 1px 0px;
 }
 
 img.mapIcon {
   width: 40px;
   height: 40px;
+}
+
+img.logoCave {
+  width: 50%;
 }
