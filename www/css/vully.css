@@ -31,15 +31,19 @@ section {
   position: absolute;
   display: none;
 
-  width: 40ex;
+  width: 30ex;
   min-height: 60%;
   top: 10%;
   left: 10%;
 
-  padding: 4ex;
+  padding: 6ex 8ex 4ex 8ex;
   text-align: left;
   font-family: "AJensonProLt";
 
+}
+
+section p {
+  line-height: 150%;
 }
 
 section.selectedSection {
@@ -55,20 +59,17 @@ h1 {
   font-size: 15pt;
 }
 
-.separatorBottom:after {
+.separatorBottom:after, .separatorTop:before,
+    article:after, article>header:before,
+    ul > li:before, ul:after {
   content: "";
   display: block;
   background: url("../img/dot.png") repeat-x;
   background-size: 5px 3px;
+  background-position: center center;
   height: 3px;
-}
-
-.separatorTop {
-  padding-top: 4px;
-  margin-top: 4px;
-  border-style: dotted;
-  border-width: 1px 0px 0px 0px;
-  display: block;
+  margin-top: 1ex;
+  margin-bottom: 1.3ex;
 }
 
 a { text-decoration:none; }
@@ -77,20 +78,17 @@ a:visited {color:#fee;}  /* visited link */
 
 article header {
   font-family: "AJensonProSemibold";
-  font-size: 15pt;
-  border-style: dotted;
-  border-width: 1px 0px 0px 0px;
+  font-size: 14pt;
   padding-top: 2ex;
 }
 
 article {
   padding-bottom: 1ex;
-  border-style: dotted;
-  border-width: 0px 0px 1px 0px;
 }
 
-section header p {
+section header em {
   font-family: "AJensonProLtIt";
+  font-style: normal;
 }
 
 img.mapIcon {
@@ -108,19 +106,31 @@ img.logoCave {
 
 ul {
  list-style:none; 
-}
-ul > li:first-child {
-  border-style: dotted;
-  border-width: 1px 0px 1px 0px;    
-}
-ul > li {
-  border-style: dotted;
-  border-width: 0px 0px 1px 0px;
-  padding-top: 12px;
-  padding-bottom: 12px;  
+ padding: 0px;
 }
 
+div.pageContainer {
+  text-align:center;
+  overflow: scroll;
+  position:absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+}
 /* page specific styles */
 section[id="bienvenue"] {
-  width: 40em;
+  width: 25em;
+  top: 0px;
+}
+
+section[id="bienvenue"] ul {
+  font-family: "AJensonProSemibold";
+  font-size: 14pt;
+}
+
+section[id="bienvenue"] ul > li:before,
+    section[id="bienvenue"] ul:after,
+    section[id="bienvenue"] .separatorBottom:after {
+  margin-left: 10ex;
+  margin-right: 10ex;
 }
