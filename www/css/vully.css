@@ -32,7 +32,7 @@ section {
   display: none;
 
   width: 40ex;
-  height: 60%;
+  min-height: 60%;
   top: 10%;
   left: 10%;
 
@@ -86,6 +86,10 @@ article {
   border-width: 0px 0px 1px 0px;
 }
 
+section header p {
+  font-family: "AJensonProLtIt";
+}
+
 img.mapIcon {
   width: 40px;
   height: 40px;
@@ -93,4 +97,27 @@ img.mapIcon {
 
 img.logoCave {
   width: 50%;
+}
+
+.centered {
+  text-align:center;
+}
+
+ul {
+ list-style:none; 
+}
+ul > li:first-child {
+  border-style: dotted;
+  border-width: 1px 0px 1px 0px;    
+}
+ul > li {
+  border-style: dotted;
+  border-width: 0px 0px 1px 0px;
+  padding-top: 12px;
+  padding-bottom: 12px;  
+}
+
+/* page specific styles */
+section[id="bienvenue"] {
+  width: 40em;
 }
