@@ -59,6 +59,7 @@ h1 {
   content: "";
   display: block;
   background: url("../img/dot.png") repeat-x;
+  background-size: 4px 4px;
   height: 4px;
   with: 100%;
 }
