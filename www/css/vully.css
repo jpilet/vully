@@ -59,8 +59,8 @@ h1 {
   content: "";
   display: block;
   background: url("../img/dot.png") repeat-x;
-  background-size: 5px 2px;
-  height: 2px;
+  background-size: 5px 3px;
+  height: 3px;
 }
 
 .separatorTop {
