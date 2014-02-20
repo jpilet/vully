@@ -55,9 +55,13 @@ h1 {
   font-size: 15pt;
 }
 
-.separatorBottom {
-  border-style: dotted;
-  border-width: 0px 0px 1px 0px;
+.separatorBottom:after {
+  content: "";
+  display: block;
+  background: url("../img/dot.png") repeat-x;
+  background-repeat: space;
+  height: 4px;
+  with: 100%;
 }
 
 .separatorTop {
