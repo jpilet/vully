@@ -41,6 +41,7 @@ section {
   text-align: left;
   font-family: "AJensonProLt";
 
+  z-index: 10;
 }
 
 section p {
@@ -81,6 +82,7 @@ article header {
   font-family: "AJensonProSemibold";
   font-size: 14pt;
   padding-top: 2ex;
+  font-style: normal;
 }
 
 article {
@@ -122,19 +124,23 @@ div.pageContainer {
   width: 100%;
 }
 /* page specific styles */
-section[id="bienvenue"] {
+section[id="home"] {
   width: 25em;
   top: 0px;
 }
 
-section[id="bienvenue"] ul {
+section[id="home"] ul {
   font-family: "AJensonProSemibold";
   font-size: 14pt;
 }
 
-section[id="bienvenue"] ul > li:before,
+section[id="home"] ul > li:before,
     section[id="bienvenue"] ul:after,
     section[id="bienvenue"] .separatorBottom:after {
   margin-left: 10ex;
   margin-right: 10ex;
+}
+
+section.cave {
+  left: 10ex;
 }
