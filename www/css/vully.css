@@ -11,6 +11,7 @@
     font-family: 'AJensonProLtIt';
     font-style: normal;
     src: url('AJensonPro-LtIt.otf')
+    letter-spacing: 2ex
 }
 
 @font-face {
@@ -31,10 +32,10 @@ section {
   position: absolute;
   display: none;
 
-  width: 30ex;
-  min-height: 60%;
+  width: 40ex;
+  min-height: 50%;
   top: 10%;
-  left: 10%;
+  left: 30%;
 
   padding: 6ex 8ex 4ex 8ex;
   text-align: left;
@@ -43,7 +44,7 @@ section {
 }
 
 section p {
-  line-height: 150%;
+  line-height: 120%;
 }
 
 section.selectedSection {
@@ -56,7 +57,7 @@ div.mapContainer {
 
 h1 {
   font-family: "AJensonProSemibold";
-  font-size: 15pt;
+  font-size: 14pt;
 }
 
 .separatorBottom:after, .separatorTop:before,
@@ -83,7 +84,9 @@ article header {
 }
 
 article {
-  padding-bottom: 1ex;
+  padding-right: 0.1ex;
+  padding-bottom: 0.8ex;
+  width: 40ex;
 }
 
 section header em {
@@ -92,12 +95,13 @@ section header em {
 }
 
 img.mapIcon {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
 }
 
 img.logoCave {
-  width: 50%;
+  width: 100%;
+ 
 }
 
 .centered {
