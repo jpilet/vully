@@ -82,6 +82,19 @@ jQuery( function($){
       }
     }
 
+    // Un-highlight and highlight proper cave icons, if necessary.
+    $('.highlightIcon').removeClass('highlightIcon');
+    $('.unselectedIcon').removeClass('unselectedIcon');
+    var caveIsSelected =
+      $('.selectedSection.cave')
+      .each(function() {
+          $('#' + this.id + 'Icon img').addClass('highlightIcon');
+        })
+      .length > 0;
+    if (caveIsSelected) {
+      $('img.mapIcon').addClass('unselectedIcon');
+      $('.highlightIcon').removeClass('unselectedIcon');
+    }
   }
 
   // Generate map icons.

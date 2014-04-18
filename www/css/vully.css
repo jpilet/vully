@@ -101,6 +101,15 @@ img.mapIcon {
   height: 20px;
 }
 
+img.highlightIcon {
+  width: 40px;
+  height: 40px;
+}
+
+img.unselectedIcon {
+  opacity: .5;
+}
+
 img.logoCave {
   width: 100%;
  
