@@ -84,6 +84,17 @@ jQuery( function($){
 
   }
 
+  // Generate map icons.
+  $('section[data-pos]').each(function(index, elem) {
+    var id = this.id;
+    var pos = $(this).attr('data-pos');
+    $('.mapContainer').append(
+      '<div id="' + id + 'Icon" class="mapIconDiv" '
+      + 'data-map-pos="' + pos + '" data-map-anchor=".5,.5">'
+      + '<a href="#' + id + '"><img src="img/icon-cave.png" class="mapIcon"/></a>'
+      + '</div>');
+  });
+
   window.onhashchange = function() {
     selectSection();
     //ga('send', 'pageview', window.location.pathname + window.location.search + window.location.hash);
