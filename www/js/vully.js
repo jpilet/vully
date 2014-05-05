@@ -91,11 +91,17 @@ jQuery( function($){
   $('section[data-pos]').each(function(index, elem) {
     var id = this.id;
     var pos = $(this).attr('data-pos');
+    var textAnchor = $(this).attr('data-text-anchor') || "-.1,.5";
     $('.mapContainer').append(
       '<div id="' + id + 'Icon" class="mapIconDiv" '
       + 'data-map-pos="' + pos + '" data-map-anchor=".5,.5">'
       + '<a href="#' + id + '"><img src="img/icon-cave.png" class="mapIcon"/></a>'
-      + '</div>');
+      + '</div>'
+      + '<div id="' + id + 'Label" class="mapLabelDiv" '
+      + 'data-map-pos="' + pos + '" data-map-anchor="' + textAnchor + '">'
+      + '<a href="#' + id + '">' + $('#' + id + ' header').html() + '</a>'
+      + '</div>'
+      );
   });
 
   window.onhashchange = function() {
