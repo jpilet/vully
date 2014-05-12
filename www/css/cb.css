@@ -25,12 +25,6 @@ img.coin {margin-top:-120px; width:60px;
 	-webkit-column-width:200px;
 	-webkit-column-gap:50px;
 }
-.column_1 { width:18%; float:left; padding-left:7.5%; margin-bottom:7.5%;}
-.column_int { width:18%; float:left; padding-left:4%;}
-.column_1 p {text-align:justify;}
-.column_int p {text-align:justify;}
-article.column_1:after {display:none;}
-article.column_int:after {display:none;}
 .signature {margin-top:20px;}
 footer:before, footer:after {
   content: "";
