@@ -7,6 +7,24 @@ img.coin {margin-top:-120px; width:60px;
   -o-transform:rotate(-90deg); 
   -ms-transform:rotate(-90deg); 
   transform:rotate(-90deg);}
+.autoColumns {
+	width: 85%; margin-left: auto; margin-right: auto;
+	text-align:justify;
+	
+	column-count:auto;
+	column-width:200px;
+	column-gap:50px;
+
+	/* Firefox */
+	-moz-column-count:auto;
+	-moz-column-width:200px;
+	-moz-column-gap:50px;
+
+	/* Safari and Chrome */
+	-webkit-column-count:auto;
+	-webkit-column-width:200px;
+	-webkit-column-gap:50px;
+}
 .column_1 { width:18%; float:left; padding-left:7.5%; margin-bottom:7.5%;}
 .column_int { width:18%; float:left; padding-left:4%;}
 .column_1 p {text-align:justify;}
@@ -14,7 +32,7 @@ img.coin {margin-top:-120px; width:60px;
 article.column_1:after {display:none;}
 article.column_int:after {display:none;}
 .signature {margin-top:20px;}
-footer:after, footer:before {
+footer:before, footer:after {
   content: "";
   display: block;
   background: url("../img/dot.png") repeat-x;
