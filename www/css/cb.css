@@ -1,6 +1,10 @@
-#le_vully { float:left; width:100%; max-width:100%; margin:0 auto; text-align:left;  color: #fff;  background-color: #522A42;}
+
+#le_vully {
+  float:left; width:100%; max-width:100%; margin:0 auto; text-align:left;  color: #fff;  background-color: #522A42;
+  padding-bottom: 50px;
+  }
 #le_vully  img{ max-width:100%;}
-#le_vully header{width:18%; padding-left:7.5%; margin-top:5%;}
+#le_vully header{width:18%; padding-left:7.5%; }
 img.coin {margin-top:-120px; width:60px;
   -webkit-transform:rotate(-90deg); 
   -moz-transform:rotate(-90deg);
@@ -13,20 +17,23 @@ img.coin {margin-top:-120px; width:60px;
 	
 	column-count:auto;
 	column-width:200px;
-	column-gap:50px;
+	column-gap:40px;
 
 	/* Firefox */
 	-moz-column-count:auto;
 	-moz-column-width:200px;
-	-moz-column-gap:50px;
+	-moz-column-gap:40px;
 
 	/* Safari and Chrome */
 	-webkit-column-count:auto;
 	-webkit-column-width:200px;
-	-webkit-column-gap:50px;
+	-webkit-column-gap:40px;
+	
+	font-family: 'AJensonProLt';
 }
 .signature {margin-top:20px;}
-footer:before, footer:after {
+
+footer:before, footer:after,.autoColumns:before {
   content: "";
   display: block;
   background: url("../img/dot.png") repeat-x;
