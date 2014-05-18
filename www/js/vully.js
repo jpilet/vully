@@ -46,6 +46,10 @@ jQuery( function($){
     
     section.addClass("selectedSection");
     previousSection.removeClass("selectedSection");
+    $(".hide_on").removeClass("hide");
+    $(".hide_on." + currentSectionName()).addClass("hide");
+    $(".only_on").removeClass("selectedSection");
+    $(".only_on." + currentSectionName()).addClass("selectedSection");
 
     // Find out where we should scroll the map.
     var l = initialMapPosition[currentSectionName()];
@@ -93,11 +97,11 @@ jQuery( function($){
     var pos = $(this).attr('data-pos');
     var textAnchor = $(this).attr('data-text-anchor') || "-.1,.5";
     $('.mapContainer').append(
-      '<div id="' + id + 'Icon" class="mapIconDiv" '
+      '<div id="' + id + 'Icon" class="mapIconDiv hide_on home" '
       + 'data-map-pos="' + pos + '" data-map-anchor=".5,.5">'
       + '<a href="#' + id + '"><img src="img/icon-cave.png" class="mapIcon"/></a>'
       + '</div>'
-      + '<div id="' + id + 'Label" class="mapLabelDiv" '
+      + '<div id="' + id + 'Label" class="mapLabelDiv hide_on home ' + id + '" '
       + 'data-map-pos="' + pos + '" data-map-anchor="' + textAnchor + '">'
       + '<a href="#' + id + '">' + $('#' + id + ' header').html() + '</a>'
       + '</div>'

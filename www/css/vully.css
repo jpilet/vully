@@ -48,8 +48,25 @@ section p {
   line-height: 120%;
 }
 
-section.selectedSection {
+.only_on.selectedSection, .selectedSection {
   display: block;
+}
+.only_on,.hide {
+  display: none;
+}
+
+.navButton {
+  position: absolute;
+  left:5px;
+  top:5px;
+  width: 2em;
+  height: 2em;
+}
+
+.navButton img {
+  position: absolute;
+  width: 2em;
+  height: 2em;
 }
 
 div.mapContainer {
