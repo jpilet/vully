@@ -34,6 +34,8 @@ section {
 
   width: 40ex;
   min-height: 50%;
+  max-height: 100%;
+  overflow:scroll;
   top: 10%;
   left: 30%;
 
@@ -80,7 +82,7 @@ h1 {
 
 .separatorBottom:after, .separatorTop:before,
     article:after, article>header:before,
-    ul > li:before, ul:after {
+    ul > li:before, ul > li:last-child:after {
   content: "";
   display: block;
   background: url("../img/dot.png") repeat-x;
@@ -151,8 +153,10 @@ div.pageContainer {
 }
 /* page specific styles */
 section[id="home"] {
-  width: 25em;
+  width: 70ex;
   top: 0px;
+  left: 50%;
+  margin-left: -41ex; /* Centering: - width/2 - margin-left */
 }
 
 section[id="home"] ul {
@@ -161,8 +165,8 @@ section[id="home"] ul {
 }
 
 section[id="home"] ul > li:before,
-    section[id="bienvenue"] ul:after,
-    section[id="bienvenue"] .separatorBottom:after {
+    section[id="home"] li:last-child:after,
+    section[id="home"] .separatorBottom:after {
   margin-left: 10ex;
   margin-right: 10ex;
 }
