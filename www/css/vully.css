@@ -120,7 +120,12 @@ img.mapIcon {
   height: 20px;
 }
 
-img.highlightIcon, img.largeMapIcon {
+
+img.highlightIcon {
+  
+}
+
+img.largeMapIcon {
   width: 40px;
   height: 40px;
 }
@@ -131,7 +136,6 @@ img.unselectedIcon {
 
 img.logoCave {
   width: 100%;
- 
 }
 
 .centered {
@@ -172,7 +176,28 @@ section[id="home"] ul > li:before,
 }
 
 section.cave {
-  left: 10ex;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  max-height: 70%;
+  border-bottom: 10px;
+  border-style: solid;
+  border-color: #522A42;
+}
+
+.caveHolder {
+  left: 50%;
+  top: 0%;
+  margin-left: -28ex;
+  height: 80%;
+  width: 40ex;
+  position: absolute;
+  display: block;
+}
+
+.caveHolder > img {
+  z-index: 10;
 }
 
 div.mapLabelDiv {

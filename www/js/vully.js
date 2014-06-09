@@ -52,6 +52,11 @@ jQuery( function($){
     $(".only_on").removeClass("selectedSection");
     $(".only_on." + currentSectionName()).addClass("selectedSection");
 
+    $('.caveHolder > img').remove();
+    $('.caveHolder > section').unwrap();
+    $('section.selectedSection.cave').wrap('<div class="caveHolder"></div>');
+    $('.caveHolder').append('<img src="img/coin.png"/>');
+
     // Find out where we should scroll the map.
     var l = initialMapPosition[currentSectionName()];
     var pos = section.attr('data-pos');
@@ -70,8 +75,14 @@ jQuery( function($){
         scale: zoom,
         // Place the icon at 66% on the right, to leave
         // space for text on the left.
-        vx: .66
+        vx: .33,
+        vy: .8
       };
+      $('.caveHolder > img').each(function(index, elem) {
+        var offset = $(this).offset();
+        l.vx = offset.left / $('.mapContainer').width();
+        l.vy = (offset.top + $(this).height()) / $('.mapContainer').height();
+      });
     }
 
     // Actually scroll the map.
@@ -79,7 +90,7 @@ jQuery( function($){
       // canvas not yet initialized.
       $('.mapContainer').attr('data-map-initialLocation',
        '{x:' + l.x + ',y:' + l.y + ',scale:' + l.scale
-       + ',vx:' + l.vx + '}');
+       + ',vx:' + l.vx + ',vy:' + l.vy + '}');
     } else {
       $('.mapContainer canvas')[0].canvasTilesRenderer.setLocation(l);
     }
@@ -97,7 +108,7 @@ jQuery( function($){
       $('img.mapIcon').addClass('unselectedIcon');
       $('.highlightIcon').removeClass('unselectedIcon');
     }
-  }
+  }  // function selectSection
 
   function caveTitle(id) {
     return $('#' + id + ' header').html();
