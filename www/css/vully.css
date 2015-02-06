@@ -80,6 +80,7 @@ h1 {
   font-size: 14pt;
 }
 
+/*
 .separatorBottom:after, .separatorTop:before,
     article:after, article>header:before,
     ul > li:before, ul > li:last-child:after {
@@ -92,6 +93,7 @@ h1 {
   margin-top: 1ex;
   margin-bottom: 1.3ex;
 }
+*/
 
 a { text-decoration:none; }
 a:link {color:#fff;}      /* unvisited link */
@@ -211,3 +213,18 @@ div.mapLabelDiv {
 
 div.mapLabelDiv a:link, div.mapLabelDiv a:visited {color:#000;}
 
+
+.semiTransp {
+  background-color: rgba(82, 42, 66, .8);
+  color:#FFFFFF;
+  display: inline-block;  
+}
+.menu li {
+  background-color: rgba(82, 42, 66, .8);
+  color:#FFFFFF;
+  display: inline-block;
+
+  padding: 10px 20px;
+  margin-right: 50%;
+  font-size: 30px;
+}
