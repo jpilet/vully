@@ -22,9 +22,13 @@
           color: #fff;
           background-color: #522A42;
         }
+        #vullyContent {
+          position:relative;
+        }
         #video {
-          float: left;
-          width: 40%;
+          float:left;
+          min-width: 360px;
+          width: 90%;
           margin: 0 5%;
           text-align: left;
           color: #fff;
@@ -47,6 +51,14 @@
           margin-bottom: 1.3ex;
         }
 
+@media screen and (min-width:900px) {
+  #video {
+    width: 40%;
+  }
+  #le_vully {
+    width: 50%;
+  }
+}
   </style>
 	<link rel='stylesheet' type='text/css' media='screen' href='css/vully.css' />
 	<link rel='stylesheet' type='text/css' media='screen' href='css/cb.css' />
@@ -55,11 +67,13 @@
 <div class="bandeau">  
   <ul class="menu">
     <li><a href="site.html#vignerons">LES VIGNERONS</a></li>
-    <li><a href="site.html#agenda">NOTRE AGENDA</a></li>
+    <li><a href="site.html#agenda">LES ÉVÉNEMENTS</a></li>
     <li class="opaque"><a href="le_vully.html">LE VULLY</a></li>
   </ul>
-</div><div id='le_vully'>
-	<header><h1>DECOUVRIR LE VULLY</h1></header>
+</div>
+<div id="vullyContent">
+<div id='le_vully'>
+	<header><h1>DÉCOUVRIR LE VULLY</h1></header>
 	<div class='autoColumns'>
 	<p>Le Mont Vully se distingue de loin à la ronde. A califourchon entre deux lacs, il jouit d’un climat qui évoque la douceur méditerranéenne. Depuis l’oppidum édifié jadis par les Helvètes au sommet de la montagne, la vue sur les Alpes bernoises, les Préalpes fribourgeoises et la chaîne du Jura est imprenable. La face nord, sauvage et inhabitée, plonge vers les eaux profondes du lac de Neuchâtel, tandis que la face sud, apprivoisée par l’homme, est bordée par les villages collés les uns aux autres, le long du lac de Morat. Les vignes plantées sur ce coteau sont travaillées par vingt-quatre vignerons artisans. Ce terroir unique repose sur des bancs de molasse et dévoile des vins d’une grande précision aromatique.</p>
 	<p>Parler de la région viticole des Trois-Lacs, c’est un peu paraphraser l’Ancien Testament avec l’histoire de David et de Goliath. Le Vully est la plus petite des grandes appellations de Suisse. Ne vous méprenez pas  ! Petit ne signifie pas inférieur. Un nain peut rivaliser avec un géant. Les nombreux jeunes vignerons qui dirigent les domaines contribuent à la renommée de cette région considérée comme la plus dynamique de Suisse sur le plan viticole et oenologique.</p>
@@ -71,9 +85,11 @@
 	</div>
 </div>
 <div id="video">
-  <h1>LA REGION DES 3 LACS</h1>
+  <h1>LA RÉGION DES 3 LACS</h1>
   <em>un film réalisé par SwissWine</em>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/fdOXcbuWC1k?rel=0" frameborder="0" allowfullscreen></iframe>
+  <br/>
+  <br/>
+  <iframe width="360" height="235" src="https://www.youtube.com/embed/fdOXcbuWC1k?rel=0" frameborder="0" allowfullscreen></iframe>
   <h1>VULLY TOURISME</h1>
   <em>
   Route principale 69<br />
@@ -86,7 +102,7 @@
   <a href="http://www.levully.ch/">www.levully.ch</a>
   <hr/>
   </em>
-  
+</div>  
 </div>
 </body>
 </html>

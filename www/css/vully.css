@@ -235,3 +235,9 @@ div.mapLabelDiv a:link, div.mapLabelDiv a:visited {color:#000;}
   margin-right: 50%;
   font-size: 30px;
 }
+
+.langIcon {
+ width:55px;
+ height:55px;
+ display: block; 
+}
