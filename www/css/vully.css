@@ -117,6 +117,10 @@ section header em {
   font-style: normal;
 }
 
+em {
+  font-family: "AJensonProLtIt";
+}
+
 img.mapIcon {
   width: 20px;
   height: 20px;
@@ -147,6 +151,7 @@ img.logoCave {
 ul {
  list-style:none; 
  padding: 0px;
+ margin: 0px;
 }
 
 div.pageContainer {
@@ -218,13 +223,20 @@ div.mapLabelDiv a:link, div.mapLabelDiv a:visited {color:#000;}
   background-color: rgba(82, 42, 66, .8);
   color:#FFFFFF;
   display: inline-block;  
+  font-family: "AJensonProLt";
 }
+
+.menu .opaque, .opaque {
+  background-color: rgba(82, 42, 66, 1);
+}
+
 .menu li {
   background-color: rgba(82, 42, 66, .8);
   color:#FFFFFF;
   display: inline-block;
+  font-family: "AJensonProSemibold";
 
-  padding: 10px 20px;
+  padding: 14px 20px 10px 20px;
   margin-right: 50%;
   font-size: 30px;
 }

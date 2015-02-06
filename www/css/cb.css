@@ -1,10 +1,10 @@
 
 #le_vully {
-  float:left; width:100%; max-width:100%; margin:0 auto; text-align:left;  color: #fff;  background-color: #522A42;
+  float:left; width:50%; margin:0 auto; text-align:left; 
   padding-bottom: 50px;
   }
 #le_vully  img{ max-width:100%;}
-#le_vully header{width:18%; padding-left:7.5%; }
+#le_vully header{width:100%; padding-left:7.5%; }
 img.coin {margin-top:-120px; width:60px;
   -webkit-transform:rotate(-90deg); 
   -moz-transform:rotate(-90deg);
@@ -33,8 +33,9 @@ img.coin {margin-top:-120px; width:60px;
 }
 .signature {margin-top:20px;}
 
-footer:before, footer:after,.autoColumns:before {
+footer:before, footer:after,.autoColumns:before, hr {
   content: "";
+  border:0;
   display: block;
   background: url("../img/dot.png") repeat-x;
   background-size: 5px 3px;
