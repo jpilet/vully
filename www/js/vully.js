@@ -55,7 +55,6 @@ jQuery( function($){
     $('.caveHolder > img').remove();
     $('.caveHolder > section').unwrap();
     $('section.selectedSection.cave').wrap('<div class="caveHolder"></div>');
-    $('.caveHolder').append('<img src="img/coin.png"/>');
 
     // Find out where we should scroll the map.
     var l = initialMapPosition[currentSectionName()];
@@ -75,8 +74,8 @@ jQuery( function($){
         scale: zoom,
         // Place the icon at 66% on the right, to leave
         // space for text on the left.
-        vx: .33,
-        vy: .8
+        vx: .66,
+        vy: .5
       };
       $('.caveHolder > img').each(function(index, elem) {
         var offset = $(this).offset();
@@ -134,7 +133,7 @@ jQuery( function($){
       );
   });
 
-  var prazList = $('<ul/>');
+  var prazList = $('<ul class="listPraz"/>');
   $('#listePraz').append(prazList);
   $('.praz').each(function(){
     prazList.append('<a href="#' + this.id + '">' + caveTitle(this.id) + '</a><br/>');
