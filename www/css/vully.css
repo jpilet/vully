@@ -33,9 +33,7 @@ section {
   display: none;
 
   width: 40ex;
-  min-height: 50%;
-  max-height: 100%;
-  overflow:scroll;
+
   top: 10%;
   left: 30%;
 
@@ -59,10 +57,8 @@ section p {
 
 .navButton {
   position: absolute;
-  left:5px;
-  top:5px;
-  width: 2em;
-  height: 2em;
+  left:0px;
+  top:0px;
 }
 
 .navButton img {
@@ -78,6 +74,7 @@ div.mapContainer {
 h1 {
   font-family: "AJensonProSemibold";
   font-size: 14pt;
+  padding-top: 40px;
 }
 
 /*
@@ -186,21 +183,19 @@ section.cave {
   position: relative;
   left: 0px;
   top: 0px;
-  width: 100%;
-  max-height: 70%;
-  border-bottom: 10px;
-  border-style: solid;
-  border-color: #522A42;
+  width: 40ex;
 }
 
 .caveHolder {
-  left: 50%;
+  left: 0;
   top: 0%;
-  margin-left: -28ex;
-  height: 80%;
-  width: 40ex;
+  margin-left: 0;
+  height: 100%;
+  width: 400px;
   position: absolute;
   display: block;
+  overflow: scroll;
+  background-color: #522A42;
 }
 
 .caveHolder > img {
