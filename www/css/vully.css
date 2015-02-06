@@ -77,10 +77,9 @@ h1 {
   padding-top: 40px;
 }
 
-/*
+/* ul > li:before, ul > li:last-child:after */
 .separatorBottom:after, .separatorTop:before,
-    article:after, article>header:before,
-    ul > li:before, ul > li:last-child:after {
+    article:after, article>header:before {
   content: "";
   display: block;
   background: url("../img/dot.png") repeat-x;
@@ -90,7 +89,6 @@ h1 {
   margin-top: 1ex;
   margin-bottom: 1.3ex;
 }
-*/
 
 a { text-decoration:none; }
 a:link {color:#fff;}      /* unvisited link */
@@ -141,6 +139,12 @@ img.logoCave {
   width: 100%;
 }
 
+img.portraitCave {
+  width: 56ex;
+  left: -8ex;
+  display:block;
+  position:relative;
+}
 .centered {
   text-align:center;
 }
@@ -191,11 +195,11 @@ section.cave {
   top: 0%;
   margin-left: 0;
   height: 100%;
-  width: 400px;
   position: absolute;
   display: block;
   overflow: scroll;
   background-color: #522A42;
+  z-index: 9;
 }
 
 .caveHolder > img {
