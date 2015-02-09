@@ -77,6 +77,10 @@ h1 {
   padding-top: 40px;
 }
 
+h2 {
+  font-size: 12pt;
+}
+
 /* ul > li:before, ul > li:last-child:after */
 .separatorBottom:after, .separatorTop:before,
     article:after, article>header:before {
