@@ -6,11 +6,22 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
   <style>
     html { height: 100%; }
-    body {margin: 0; width: 100%; height: 95%; overflow:hidden; }
+    body {margin: 0; width: 100%; height: 100%; overflow:hidden; }
     .mapContainer { width: 100%; height: 100%; overflow:hidden; }
-    .red { background-color: #f00; }
     .listPraz {
       text-align: center;
+    }
+    .caveHolderNavigation {
+      display: block;
+      position: absolute;
+      left:0px;
+      bottom:0px;
+      width: 400px;
+      height: 55px;
+    }
+    .margin48px{
+      margin-left: 48px;
+      margin-right: 48px;
     }
   </style>
   <link rel="stylesheet" href="css/vully.css">
@@ -23,7 +34,7 @@
     class="mapContainer"
     data-map-url= "http://api.tiles.mapbox.com/v4/mapbox.light/$scale/$x/$y.jpg?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
     data-map-initialLocation="{x:0.5189310839225135,y:0.3516568495720967,scale:0.003060881448394781}"
-    data-map-onLocationChange="showLocation"
+    <!--data-map-onLocationChange="showLocation"-->
   >
  
     <section id="agenda">
@@ -377,6 +388,11 @@
     <a href="#vignerons"><img class="homeButton" src="img/left.svg"/></a>
   </div>
 
+  <div class="caveHolderNavigation opaque">
+    <a href="index.html"><img class="iconSize margin48px" src="img/logo-vully-blanc.png"/></a>
+    <a href="#vignerons"><img class="iconSize margin48px floatRight" src="img/left.svg"/></a>
+  </div>
+
   <!-- load JQuery -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
@@ -384,7 +400,7 @@
   <!-- Load our page logic code. -->
   <script src="js/vully.js"></script>
 
-  <!-- Debug footer: Show location information under the map. -->
+  <!-- Debug footer: Show location information under the map.
   <div class="footer">
     Location:<span id="location"></span>
     Mouse: <span id="mousePos"></span>
@@ -409,6 +425,6 @@
       }, false);
     }
   </script>
-
+-->
 </body>
 </html>

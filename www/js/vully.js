@@ -55,6 +55,10 @@ jQuery( function($){
     $('.caveHolder > img').remove();
     $('.caveHolder > section').unwrap();
     $('section.selectedSection.cave').wrap('<div class="caveHolder"></div>');
+    $('.caveHolderNavigation').addClass("hide");
+    $('section.selectedSection.cave').each(function(){
+      $('.caveHolderNavigation').removeClass("hide");
+    });
 
     // Find out where we should scroll the map.
     var l = initialMapPosition[currentSectionName()];

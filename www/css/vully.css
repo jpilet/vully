@@ -37,7 +37,7 @@ section {
   top: 10%;
   left: 30%;
 
-  padding: 6ex 8ex 4ex 8ex;
+  padding: 36px 48px 4ex 48px;
   text-align: left;
   font-family: "AJensonProLt";
 
@@ -140,8 +140,8 @@ img.logoCave {
 }
 
 img.portraitCave {
-  width: 56ex;
-  left: -8ex;
+  width: 400px;
+  left: -48px;
   display:block;
   position:relative;
 }
@@ -187,19 +187,20 @@ section.cave {
   position: relative;
   left: 0px;
   top: 0px;
-  width: 40ex;
+  width: 304px;
 }
 
 .caveHolder {
   left: 0;
   top: 0%;
+  bottom: 0px;
   margin-left: 0;
-  height: 100%;
   position: absolute;
   display: block;
   overflow: scroll;
   background-color: #522A42;
   z-index: 9;
+  margin-bottom: 55px;
 }
 
 .caveHolder > img {
@@ -240,8 +241,16 @@ div.mapLabelDiv a:link, div.mapLabelDiv a:visited {color:#000;}
   font-size: 30px;
 }
 
-.langIcon {
+
+.iconSize,.langIcon {
  width:55px;
  height:55px;
+}
+
+.langIcon {
  display: block; 
+}
+
+.floatRight {
+  float:right;
 }
