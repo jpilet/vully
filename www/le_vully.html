@@ -11,12 +11,12 @@
     .mapContainer { width: 100%; height: 100%; overflow:hidden; }
     .red { background-color: #f00; }
     .bandeau {
-      background-image: url("img/panorama-vully-1.jpg"
+      /*background-image: url("img/vully/vully-1.jpg");*/
         );
         background-repeat: none;
         background-size: cover;
         background-position: center;
-        padding: 60px 0px 0px 0px;
+        padding: 300px 0px 0px 0px;
         }
         body {
           color: #fff;
@@ -73,9 +73,8 @@
 </div>
 <div id="vullyContent">
 <div id='le_vully'>
-	<header><h1>DÉCOUVRIR LE VULLY</h1></header>
 	<div class='autoColumns'>
-	<p>Le Mont Vully se distingue de loin à la ronde. A califourchon entre deux lacs, il jouit d’un climat qui évoque la douceur méditerranéenne. Depuis l’oppidum édifié jadis par les Helvètes au sommet de la montagne, la vue sur les Alpes bernoises, les Préalpes fribourgeoises et la chaîne du Jura est imprenable. La face nord, sauvage et inhabitée, plonge vers les eaux profondes du lac de Neuchâtel, tandis que la face sud, apprivoisée par l’homme, est bordée par les villages collés les uns aux autres, le long du lac de Morat. Les vignes plantées sur ce coteau sont travaillées par vingt-quatre vignerons artisans. Ce terroir unique repose sur des bancs de molasse et dévoile des vins d’une grande précision aromatique.</p>
+	DÉCOUVRIR LE VULLY<p>Le Mont Vully se distingue de loin à la ronde. A califourchon entre deux lacs, il jouit d’un climat qui évoque la douceur méditerranéenne. Depuis l’oppidum édifié jadis par les Helvètes au sommet de la montagne, la vue sur les Alpes bernoises, les Préalpes fribourgeoises et la chaîne du Jura est imprenable. La face nord, sauvage et inhabitée, plonge vers les eaux profondes du lac de Neuchâtel, tandis que la face sud, apprivoisée par l’homme, est bordée par les villages collés les uns aux autres, le long du lac de Morat. Les vignes plantées sur ce coteau sont travaillées par vingt-quatre vignerons artisans. Ce terroir unique repose sur des bancs de molasse et dévoile des vins d’une grande précision aromatique.</p>
 	<p>Parler de la région viticole des Trois-Lacs, c’est un peu paraphraser l’Ancien Testament avec l’histoire de David et de Goliath. Le Vully est la plus petite des grandes appellations de Suisse. Ne vous méprenez pas  ! Petit ne signifie pas inférieur. Un nain peut rivaliser avec un géant. Les nombreux jeunes vignerons qui dirigent les domaines contribuent à la renommée de cette région considérée comme la plus dynamique de Suisse sur le plan viticole et oenologique.</p>
 	<p>Découvrir le Vully est une espèce de parcours initiatique. La région reflète une réalité multiculturelle typiquement helvétique. Point de rencontre de quatre cantons, elle se trouve à la frontière entre la Suisse alémanique et la Suisse romande. Cette diversité a influencé les viticulteurs qui sont capables d’offrir une palette impressionnante de vin à même de régaler les goûts les plus éclectiques. Mosaïque de saveurs, de senteurs et de couleurs, les cépages proposés aux amateurs de bons crus ont pour nom Traminer, Freiburger, Pinot gris ou Chardonnay en blanc, Pinot noir, Gamaret ou Merlot en rouge, sans oublier le fameux Chasselas.</p>
 	<p>Identitaire du Vully, ce dernier s'affirme, d’année en année. Parmi les initiés, il est considéré comme un des meilleurs de Suisse. Les résultats des récents concours de vins confirment à quel point le Chasselas du Vully est apprécié.</p>
@@ -104,5 +103,10 @@
   </em>
 </div>  
 </div>
+  <script>
+  var elem = document.getElementsByClassName("bandeau")[0];
+  var num = (1+Math.floor(Math.random()*9));
+  elem.style.backgroundImage = 'url("img/vully/vully-' + num + '.jpg")';
+  </script>
 </body>
 </html>

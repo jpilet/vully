@@ -14,6 +14,7 @@
     .caveHolderNavigation {
       display: block;
       position: absolute;
+ 	  padding: 200px;
       left:0px;
       bottom:0px;
       width: 400px;
@@ -22,6 +23,11 @@
     .margin48px{
       margin-left: 48px;
       margin-right: 48px;
+    }
+        #cavesDescription {
+      padding: 15px 20px;
+      margin-top:20px;
+      margin-bottom: 20px;
     }
   </style>
   <link rel="stylesheet" href="css/vully.css">
@@ -373,7 +379,7 @@
     <div class="mapIconDiv only_on vignerons" data-map-pos="0.5197157311485393,0.35191683345002545"
         data-map-anchor=".5,.5">
       <a href="#praz">
-        <img src="img/loupe.svg" class="largeMapIcon"/>
+        <img src="img/icon-cave.png" class="largeMapIcon"/>
       </a>
     </div>
     <div id="listePraz" class="mapLabelDiv only_on vignerons" data-map-pos="0.5197157311485393,0.35191683345002545"
@@ -385,7 +391,12 @@
     <ul class="menu">
       <li><a href="le_vully.html">LE VULLY</a></li>
       <li><a href="evenements.html">LES ÉVÉNEMENTS</a></li>
-      <li class="opaque"><a href="site.html#vignerons">LES VIGNERONS</a></li>
+      <li class="opaque"><a href="site.html#vignerons">LES VIGNERONS</a></li> </ul>
+  <div id="cavesDescription" class="semiTransp">
+    24 vignerons vous accueillent.<br/>
+    Cliquez sur le nom de la cave pour voir les informations de contact.<br/>
+    Les horaires d'ouverture des caves se trouvent sur leur site respectif.
+  </div>
     </ul>
   </div>
 
@@ -394,8 +405,8 @@
   </div>
 
   <div class="caveHolderNavigation opaque">
-    <a href="index.html"><img class="iconSize margin48px" src="img/logo-vully-blanc.png"/></a>
-    <a href="#vignerons"><img class="iconSize margin48px floatRight" src="img/left.svg"/></a>
+    <a href="index.html"><img class="iconSize margin50px" src="img/logo-vully-blanc.png"/></a>
+    <a href="#vignerons"><img class="iconSize margin50px floatRight" src="img/icon-zoom-out.png"/></a>
   </div>
 
   <!-- load JQuery -->
