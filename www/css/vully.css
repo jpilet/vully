@@ -74,6 +74,7 @@ div.mapContainer {
 h1 {
   font-family: "AJensonProSemibold";
   font-size: 14pt;
+  letter-spacing: 2px;
   padding-top: 40px;
   font-weight:normal;
 }
@@ -101,6 +102,7 @@ a:visited {color:#fee;}  /* visited link */
 
 article header {
   font-family: "AJensonProSemibold";
+  letter-spacing: 2px;
   font-size: 14pt;
   padding-top: 2ex;
   font-style: normal;
@@ -179,6 +181,7 @@ section[id="home"] {
 section[id="home"] ul {
   font-family: "AJensonProSemibold";
   font-size: 14pt;
+  letter-spacing: 2px;
 }
 
 section[id="home"] ul > li:before,
@@ -240,6 +243,7 @@ div.mapLabelDiv a:link, div.mapLabelDiv a:visited {color:#000;}
   color:#FFFFFF;
   display: inline-block;
   font-family: "AJensonProSemibold";
+  letter-spacing: 2px;
   font-weight:normal;
 
   padding: 14px 20px 10px 20px;

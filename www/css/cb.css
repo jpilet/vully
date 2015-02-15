@@ -35,7 +35,7 @@ img.coin {margin-top:-120px; width:60px;
 	
 	font-family: 'AJensonProLt';
 }
-.signature {margin-top:20px;}
+.signature {margin-top:10px;}
 
 footer:before, footer:after,#le_vully .autoColumns:before, hr {
   content: "";
