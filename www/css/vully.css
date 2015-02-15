@@ -8,10 +8,9 @@
 }
 
 @font-face {
-    font-family: 'AJensonProLtIt';
+    font-family: 'AJensonPro-ital';
     font-style: normal;
-    src: url('AJensonPro-LtIt.otf')
-    letter-spacing: 2ex
+    src: url('AJensonPro-2.otf')
 }
 
 @font-face {
@@ -118,12 +117,13 @@ article {
 }
 
 section header em {
-  font-family: "AJensonProLtIt";
+  font-family: "AJensonPro-ital";
   font-style: normal;
 }
 
 em {
-  font-family: "AJensonProLtIt";
+  font-family: "AJensonPro-ital";
+	font-style: normal;
 }
 
 img.mapIcon {
