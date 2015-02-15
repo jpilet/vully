@@ -66,13 +66,13 @@ Mot de passe:
           var select = $("#entrySelect");
           
           select.html("");
-          var item = $("<option value=\"new\">Nouvel événement</option>")
+          var item = $("<option value=\"new\">Nouvel événement</option>");
           item.data("entry", newEntry);
           select.append(item);
           
           for (var i in allEntries) {
             var entry = allEntries[i];
-            var item = $("<option value=\"" + i + "\">" + entry.date + " - " + entry.title + "</option>")
+            var item = $("<option value=\"" + i + "\">" + entry.date + " - " + entry.title + "</option>");
             item.data("entry", entry);
             select.append(item);
           }
