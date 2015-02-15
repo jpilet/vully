@@ -4,7 +4,8 @@
 }
 
 #le_vully {
-  float:left; margin:0 auto; text-align:left; 
+  float:left;
+  text-align:left; 
   padding-bottom: 50px;
   }
 #le_vully  img{ max-width:100%;}
@@ -16,7 +17,7 @@ img.coin {margin-top:-120px; width:60px;
   -ms-transform:rotate(-90deg); 
   transform:rotate(-90deg);}
 .autoColumns {
-	width: 85%; margin-left: auto; margin-right: auto;
+	width: 100%;
 	text-align:justify;
 	
 	column-count:auto;
