@@ -37,7 +37,7 @@ section {
   top: 10%;
   left: 30%;
 
-  padding: 36px 48px 4ex 48px;
+  padding: 0px 48px 0px 48px;
   text-align: left;
   font-family: "AJensonProLt";
 
@@ -59,6 +59,8 @@ section p {
   position: absolute;
   left:0px;
   top:0px;
+  width:0px;
+  background-color: rgba(0,0,0,0);
 }
 
 .navButton img {
@@ -76,10 +78,12 @@ h1 {
   font-size: 14pt;
   padding-top: 40px;
   font-weight:normal;
+  text-align: left;
 }
 
 h2 {
   font-size: 12pt;
+  text-align: left;
 }
 
 /* ul > li:before, ul > li:last-child:after */
@@ -109,7 +113,6 @@ article header {
 article {
   padding-right: 0.1ex;
   padding-bottom: 0.8ex;
-  width: 40ex;
 }
 
 section header em {
@@ -141,11 +144,12 @@ img.unselectedIcon {
 }
 
 img.logoCave {
-  width: 100%;
+width: 244px;
+margin: 20px;
 }
 
 img.portraitCave {
-  width: 400px;
+  width: 380px;
   left: -48px;
   display:block;
   position:relative;
@@ -192,7 +196,7 @@ section.cave {
   position: relative;
   left: 0px;
   top: 0px;
-  width: 304px;
+  width: 284px;
 }
 
 .caveHolder {
@@ -243,10 +247,11 @@ div.mapLabelDiv a:link, div.mapLabelDiv a:visited {color:#000;}
   font-weight:normal;
 
   padding: 14px 20px 10px 20px;
-  margin-right: 50%;
   font-size: 30px;
+  white-space: nowrap;
 }
 
+ul.menu { width: 0px; }
 
 .iconSize,.langIcon {
  width:55px;
@@ -263,4 +268,15 @@ div.mapLabelDiv a:link, div.mapLabelDiv a:visited {color:#000;}
 
 .floatRight {
   float:right;
+}
+
+.logoVully {
+  width: 55px;
+  height: 55px;
+  background-image: url('../img/logo-vully-color.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 55px;
+  display: inline-block;
+  margin-bottom: 55px;
 }
