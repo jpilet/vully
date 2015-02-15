@@ -15,9 +15,9 @@
         }
   #les_evenements {
     padding: 0px;
-    width: 84%;
-    margin-right:8%;
-    margin-left:8%;
+    width: 80%;
+    margin-right:10%;
+    margin-left:10%;
   }
   #les_evenements h1 {
     padding-top: 40px;
@@ -27,6 +27,5 @@
     margin-right: auto;
     width: 85%;
   }
-  
   
   .block { display: inline-block; }

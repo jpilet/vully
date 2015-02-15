@@ -8,10 +8,9 @@
 }
 
 @font-face {
-    font-family: 'AJensonProLtIt';
+    font-family: 'AJensonPro-ital';
     font-style: normal;
-    src: url('AJensonPro-LtIt.otf')
-    letter-spacing: 2ex
+    src: url('AJensonPro-2.otf')
 }
 
 @font-face {
@@ -118,12 +117,13 @@ article {
 }
 
 section header em {
-  font-family: "AJensonProLtIt";
+  font-family: "AJensonPro-ital";
   font-style: normal;
 }
 
 em {
-  font-family: "AJensonProLtIt";
+  font-family: "AJensonPro-ital";
+	font-style: normal;
 }
 
 img.mapIcon {
@@ -133,12 +133,13 @@ img.mapIcon {
 
 
 img.highlightIcon {
-  
+  width: 32px;
+  height: 32px;
 }
 
 img.largeMapIcon {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
 }
 
 img.unselectedIcon {
@@ -146,8 +147,9 @@ img.unselectedIcon {
 }
 
 img.logoCave {
-width: 244px;
-margin: 20px;
+width: 200px;
+margin-left: 42px;
+margin-top: 20px;
 }
 
 img.portraitCave {
@@ -222,7 +224,8 @@ section.cave {
 
 div.mapLabelDiv {
   color: #000;
-  font-size: 10pt;
+  font-size: 9pt;
+  font-weight: 500;
   font-family: "AJensonProSemibold";
 }
 .mapLabelDiv ul {
@@ -263,9 +266,14 @@ ul.menu { width: 0px; }
  height:55px;
 }
 .iconSize2 {
+ width:50px;
+ height:47px;
+}
+.iconSize3 {
  width:32px;
  height:32px;
 }
+
 
 .langIcon {
  display: block; 
