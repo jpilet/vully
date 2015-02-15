@@ -209,7 +209,7 @@ section.cave {
   margin-left: 0;
   position: absolute;
   display: block;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   background-color: #522A42;
   z-index: 9;
