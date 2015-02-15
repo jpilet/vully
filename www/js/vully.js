@@ -60,6 +60,13 @@ jQuery( function($){
       $('.caveHolderNavigation').removeClass("hide");
     });
 
+    var showNav = { "vignerons": true, "praz": true};
+    if (currentSectionName() in showNav) {
+      $("div.navButton").removeClass("hide");
+    } else {
+      $("div.navButton").addClass("hide");      
+    }
+
     // Find out where we should scroll the map.
     var l = initialMapPosition[currentSectionName()];
     var pos = section.attr('data-pos');
