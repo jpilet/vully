@@ -1,0 +1,32 @@
+        #les_evenements h1:after, #les_evenements h2:after{
+          background-color: transparent;
+          background-image: url("../img/dot.png");
+          background-repeat: repeat-x;
+          background-attachment: scroll;
+          background-position: center center;
+          background-clip: border-box;
+          background-origin: padding-box;
+          background-size: 5px 3px;
+          content: "";
+          display: block;
+          height: 3px;
+          margin-top: 1ex;
+          margin-bottom: 1.3ex;
+        }
+  #les_evenements {
+    padding: 0px;
+    width: 84%;
+    margin-right:8%;
+    margin-left:8%;
+  }
+  #les_evenements h1 {
+    padding-top: 40px;
+  }
+  #les_evenements header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+  }
+  
+  
+  .block { display: inline-block; }

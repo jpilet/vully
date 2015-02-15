@@ -3,28 +3,49 @@
 <head>
   <meta charset="utf-8">
   <title>VULLY : Les Vignerons</title>
+  <link rel="stylesheet" href="css/vully.css">
+  <link rel='stylesheet' type='text/css' href='css/cb.css' />
+  <link rel='stylesheet' type='text/css' href='css/evenements.css' />
+
+<style>
+  .hidden { display: none; }
+  body {
+    color: #fff;
+    background-color: #522A42;
+  }
+
+</style>
 </head>
 <body>
 
 Choisir un événement:
 <select id="entrySelect">
 </select>
+<input id="deleteButton" type="button" value="Effacer l'événement"/>
 <div id="errorMessage"></div>
 <hr/>
 
 <p>Date: <input id="dateInput" type="text" size="40" name="dateInput"></p>
+<p>LinkedFile: <input id="linkedFileInput" type="text" size="40" name="linkedFileInput"></p>
 <p>Titre: <input id="titleInput" type="text" size="80" name="title"></p>
 <p><textarea id="textInput" name="text" rows="10" cols="80"></textarea></p>
 
 Mot de passe:
-<input id="password" type="text" size="20"/>
+<input id="password" type="password" size="20"/>
 
 <input id="validateButton" type="button" value=""/>
+
+<hr/>
+<div id='les_evenements'>
+  <div id="eventContainer" class='autoColumns'>
+  </div>
+</div>
 
   <!-- load JQuery -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>');</script>
   <script src="js/md5.js"></script>
+  <script src="js/evenements.js"></script>
 
   <script>
     var allEntries = [];
@@ -50,17 +71,24 @@ Mot de passe:
     }
     
     function fillForm() {
-      $("#entrySelect option:selected").each(function() {
-          $("#dateInput").val($(this).data("entry").date);
-          $("#titleInput").val($(this).data("entry").title);
-          $("#textInput").text($(this).data("entry").text);
-          $("#validateButton").val($(this).val() == "new" ? "Ajouter événement" : "Enregistrer événement");          
-      });
+      var entry = $("#entrySelect option:selected").data("entry");
+      $("#dateInput").val(entry.date);
+      $("#linkedFileInput").val(entry.linkedFile);
+      $("#titleInput").val(entry.title);
+      $("#textInput").val(entry.text);
+      var isNew = $("#entrySelect option:selected").val() == "new";
+      $("#validateButton").val(isNew ? "Ajouter événement" : "Enregistrer événement");
+      if (isNew) {
+        $("#deleteButton").addClass("hidden");
+      } else {
+        $("#deleteButton").removeClass("hidden");
+      }
     }
     function readForm(entry) {
       entry.date = $("#dateInput").val();
       entry.title = $("#titleInput").val();
-      entry.text = $("#textInput").text();
+      entry.text = $("#textInput").val();
+      entry.linkedFile = $("#linkedFileInput").val();
     }
     function populateEntries() {
           var select = $("#entrySelect");
@@ -77,6 +105,7 @@ Mot de passe:
             select.append(item);
           }
           fillForm();
+          formatEntries("#eventContainer", allEntries);
     }
     function loadEntries() {
       $.ajax({dataType:"json", url:"agenda.json"
@@ -112,11 +141,44 @@ Mot de passe:
           resetNewEntry();
         }
         populateEntries();
-        
+        saveChanges();
+      }
+      
+      function saveChanges() {
         var saveData = {
           key: $.md5(passwordHashPrefix + "password:" + $("#password").val()),
           entries: allEntries
         };
+        $.ajax({
+          url: "save_evenements.php",
+          type: "POST",
+          data: saveData,
+          success: function(answer) {
+            if (answer != "OK") {
+              $("#errorMessage").text("Problème: " + answer);
+            } else {
+              var successMessage = "Les changements ont été enregistrés";
+              $("#errorMessage").text(successMessage);
+              setTimeout(function() {
+                if ($("#errorMessage").text() == successMessage) {
+                  $("#errorMessage").text("");
+                }
+              }, 15000);
+              passwordHashPrefix = hashableString(allEntries);
+              populateEntries();
+            }
+          },
+          error: function(xhr, err) {
+            $("#errorMessage").text("Error:" + err);
+          }
+        });
+      }
+      
+      function deleteEntry() {
+        var entryToBeRemoved = $("#entrySelect option:selected").data("entry");
+        allEntries = $.grep(allEntries, function(e) { return e != entryToBeRemoved; });
+        populateEntries();
+        saveChanges();
       }
       
       resetNewEntry();
@@ -124,6 +186,7 @@ Mot de passe:
       
       $("#entrySelect").change(fillForm);
       $("#validateButton").click(validate);
+      $("#deleteButton").click(deleteEntry);      
   </script>
 </body>
 </html>
