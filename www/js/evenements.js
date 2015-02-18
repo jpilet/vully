@@ -1,3 +1,24 @@
+function validateDate(dateAsString) {
+  var fields = dateAsString.split(".");
+  if (fields.length != 3) {
+    return false;
+  }
+  
+  var year = parseInt(fields[2]);
+  if (year < 2000) year += 2000;
+  if (year < 2014 || year > 2100) {
+    return false;
+  }
+  
+  var month = parseInt(fields[1]);
+  if (month < 1 || month >12) {
+    return false;
+  }
+  
+  var day = parseInt(fields[0]);
+  if (day < 1 || day > 31) { return false; }
+  return true;
+}
 
 function parseDate(dateAsString) {
   var fields = dateAsString.split(".");
@@ -37,7 +58,11 @@ function getGroupLabel(date) {
 
 function sortEntries(entries) {
   entries.sort(function(a,b) {
-    return parseDate(a.date) - parseDate(b.date);
+    if (a.date != b.date) {
+      return parseDate(a.date) - parseDate(b.date);
+    } else {
+      return (a.title < b.title ? -1 : 1);
+    }
   });
 }
 

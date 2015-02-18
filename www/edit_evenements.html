@@ -63,8 +63,8 @@ Mot de passe:
     
     function hashableString(entries) {
       var str = "";
-      for (var i in allEntries) {
-        var entry = allEntries[i];
+      for (var i in entries) {
+        var entry = entries[i];
         str += ":"+ entry.date + ":" + entry.title + ":" + entry.text;
       }
       return str;
@@ -132,23 +132,47 @@ Mot de passe:
           return;
         }
         
+        if (!validateDate($("#dateInput").val())) {
+          $("#errorMessage").text("Format de date invalide, veuillez utiliser: jj.mm.aaaa, par exemple 30.11.2015.");
+          return;
+        }
+        
         if (entry.title.length < 3) {
           $("#errorMessage").text("Erreur: titre trop court.");
           return;
         }
-        if ($("#entrySelect option:selected").val() == "new") {
-          allEntries.push(newEntry);
-          resetNewEntry();
+        
+        var candidateNewEntries = [];
+        for (var i in allEntries) {
+          candidateNewEntries.push(allEntries[i]);
         }
-        sortEntries(allEntries);
-        populateEntries();
-        saveChanges();
-      }
+        
+        if ($("#entrySelect option:selected").val() == "new") {
+          candidateNewEntries.push(newEntry);
+        }
+        sortEntries(candidateNewEntries);
+        saveChanges(candidateNewEntries);
+    }
+    
+    function validateSavedChanges(candidateNewEntries) {
+      var successMessage = "Les changements ont été enregistrés";
+      $("#errorMessage").text(successMessage);
+      setTimeout(function() {
+        if ($("#errorMessage").text() == successMessage) {
+          $("#errorMessage").text("");
+        }
+      }, 15000);
+      passwordHashPrefix = hashableString(candidateNewEntries);
+
+      allEntries = candidateNewEntries;
+      resetNewEntry();
+      populateEntries();
+    }
       
-      function saveChanges() {
+      function saveChanges(candidateNewEntries) {
         var saveData = {
           key: $.md5(passwordHashPrefix + "password:" + $("#password").val()),
-          entries: allEntries
+          entries: candidateNewEntries
         };
         $.ajax({
           url: "save_evenements.php",
@@ -156,17 +180,9 @@ Mot de passe:
           data: saveData,
           success: function(answer) {
             if (answer != "OK") {
-              $("#errorMessage").text("Problème: " + answer);
+              $("#errorMessage").html("Problème: " + answer);
             } else {
-              var successMessage = "Les changements ont été enregistrés";
-              $("#errorMessage").text(successMessage);
-              setTimeout(function() {
-                if ($("#errorMessage").text() == successMessage) {
-                  $("#errorMessage").text("");
-                }
-              }, 15000);
-              passwordHashPrefix = hashableString(allEntries);
-              populateEntries();
+              validateSavedChanges(candidateNewEntries);
             }
           },
           error: function(xhr, err) {
@@ -177,9 +193,8 @@ Mot de passe:
       
       function deleteEntry() {
         var entryToBeRemoved = $("#entrySelect option:selected").data("entry");
-        allEntries = $.grep(allEntries, function(e) { return e != entryToBeRemoved; });
-        populateEntries();
-        saveChanges();
+        var candidateNewEntries = $.grep(allEntries, function(e) { return e != entryToBeRemoved; });
+        saveChanges(candidateNewEntries);
       }
       
       resetNewEntry();
