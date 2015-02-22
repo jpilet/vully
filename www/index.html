@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>VULLY : Les Vignerons</title>
-  
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=.5">
+
   <style>
     html { height: 100%; }
     body {margin: 0; width: 100%; position:absolute; }
@@ -12,7 +13,14 @@
       /*background-image: url("img/home/home1.jpg");*/
       background-repeat: no-repeat;
       background-position: center;
-      /*background-size: cover;*/
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      position:fixed;
+      width:100%;
+      height:100%;
+      z-index:-1;
     }
     #homeDescription {
       padding: 15px 20px;
@@ -42,7 +50,8 @@
   <link rel="stylesheet" href="css/vully.css">
 </head>
 <html>
-  <body class="homeBackgroundImage">
+  <body>
+  <div class="homeBackgroundImage"></div>
   <div id="logoCentre"></div>
   <ul class="menu">
     <li><a href="vully.html">LE VULLY</a></li>
