@@ -64,9 +64,9 @@ jQuery( function($){
 
     var showNav = { "vignerons": true, "praz": true};
     if (currentSectionName() in showNav) {
-      $("div.navButton").removeClass("hide");
+      $("div.navButton").show();
     } else {
-      $("div.navButton").addClass("hide");      
+      $("div.navButton").hide();      
       $(".mapLabelDiv").addClass("hide");
     }
     $('#' + currentSectionName() + "Label").removeClass("hide");    
