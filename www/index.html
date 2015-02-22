@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <title>VULLY : Les Vignerons</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  
   <style>
     html { height: 100%; }
-    body {margin: 0; width: 100%; min-height:100%; overflow:auto; }
+    body {margin: 0; width: 100%; position:absolute; }
     .red { background-color: #f00; }
     .homeBackgroundImage {
       /*background-image: url("img/home/home1.jpg");*/
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
+      /*background-size: cover;*/
     }
     #homeDescription {
       padding: 15px 20px;
@@ -20,16 +20,15 @@
       margin-bottom: 20px;
     }
     #logoCentre {
-      width: 150px;
       background-image: url("img/logo-vignerons-blanc.png");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 150px;
       width:100%;
-      height:35%;
+      height:300px;
     }
     .credits {
-      position: absolute;
+      position: fixed;
       bottom: 0px;
       right: 0px;
       color:#FFFFFF;
@@ -44,8 +43,6 @@
 </head>
 <html>
   <body class="homeBackgroundImage">
-  <div class="credits"><a href="">Nicolas Brodard</a>, <a href="http://antoinejavet.ch/">Antoine Javet</a>
-    et <a href="http://www.opticode.ch/">Julien Pilet</a></div>
   <div id="logoCentre"></div>
   <ul class="menu">
     <li><a href="vully.html">LE VULLY</a></li>
@@ -59,10 +56,15 @@
   
   <img class="langIcon" src="img/icon-langue-fr-a.png"/>
   <img class="langIcon" src="img/icon-langue-de.png"/>
+  
+    <div class="credits"><a href="">Nicolas Brodard</a>, <a href="http://antoinejavet.ch/">Antoine Javet</a>
+    et <a href="http://www.opticode.ch/">Julien Pilet</a></div>
+
   <script>
   var elem = document.getElementsByClassName("homeBackgroundImage")[0];
   var num = (1+Math.floor(Math.random()*9));
   elem.style.backgroundImage = 'url("img/home/home' + num + '.jpg")';
   </script>
+  
   </body>
 </html>
