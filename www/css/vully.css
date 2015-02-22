@@ -58,8 +58,9 @@ section p {
   position: absolute;
   left:0px;
   top:0px;
-  width:0px;
+  max-width:50%;
   background-color: rgba(0,0,0,0);
+  display:inline;
 }
 
 .navButton img {
@@ -240,6 +241,10 @@ div.mapLabelDiv a:link, div.mapLabelDiv a:visited {color:#000;}
   color:#FFFFFF;
   display: inline-block;  
   font-family: "AJensonProLt";
+}
+
+.moreSpace {
+  padding: 20px;
 }
 
 .menu .opaque, .opaque {

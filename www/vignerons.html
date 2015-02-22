@@ -29,7 +29,14 @@
       padding: 15px 20px;
       margin-top:20px;
       margin-bottom: 20px;
-      white-space: nowrap;
+      max-width:100%;
+    }
+    .footer {
+      z-index: 20;
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      width: 50%;
     }
   </style>
   <link rel="stylesheet" href="css/vully.css">
@@ -42,11 +49,11 @@
     class="mapContainer"
     data-map-url= "http://api.tiles.mapbox.com/v4/mapbox.light/$scale/$x/$y.jpg?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q";
     data-map-initialLocation="{x:0.5189310839225135,y:0.3516568495720967,scale:0.003060881448394781}"
-    <!--data-map-onLocationChange="showLocation"-->
-  >
+    >
+    <!-- data-map-onLocationChange="showLocation" > -->
  
     <section id="le_petit_chateau_motier" data-pos="0.519676192870007,0.3519359842099106" class="cave"
-    data-text-anchor="-.1,0">
+    data-text-anchor="-.1,0.1">
       <article>
         <img class="portraitCave" src="img/portrait-cave/le_petit_chateau_motier.jpg"/>
         <a href="http://www.lepetitchateau.ch/"><img src="img/logo-cave/le_petit_chateau_motier.png" class="logoCave"/></a>
@@ -86,7 +93,8 @@
       </article>
     </section>
     
-    <section id="cave_de_la_tour" data-map-pos="0.5196848089179845,0.35193275964934906" class="cave">
+    <section id="cave_de_la_tour" data-pos="0.5196848089179845,0.35193275964934906" class="cave"
+    data-text-anchor=".5,1.8">
       <article>
         <img class="portraitCave" src="img/portrait-cave/cave_de_la_tour.jpg"/>
         <a href="http://www.biolley-vins.ch/"><img src="img/logo-cave/cave_de_la_tour.png" class="logoCave"/></a>
@@ -221,7 +229,7 @@
     </section>
     
      <section id="domaine_du_vieux_moulin" data-pos="0.5196820099759919,0.3519335001650278" class="cave"
-     data-text-anchor=".1,1.8">
+     data-text-anchor="-.1,.3">
       <article>
         <img class="portraitCave" src="img/portrait-cave/domaine_du_vieux_moulin.jpg"/>
         <a href="http://www.derronvins.ch/"><img src="img/logo-cave/domaine_du_vieux_moulin.png" class="logoCave"/></a>
@@ -257,7 +265,7 @@
       </article>
     </section>
     
-    <section id="schmutz_vins_sa" data-pos="0.5197167718678604,0.35191669548927124" 
+    <section id="schmutz_vins_sa" data-pos="0.5197171631284639,0.3519170926871677" 
         data-zoom="0.0000259861799265515" class="cave praz">
       <article>
         <img class="portraitCave" src="img/portrait-cave/schmutz_vins_sa.jpg"/>
@@ -298,7 +306,7 @@
     </section>
     
     <section id="cave_du_vieux_praz" data-pos="0.5197150829913891,0.3519172445688405"
-        data-zoom="0.0000259861799265515" class="cave praz">
+        data-zoom="0.0000259861799265515" class="cave praz" data-text-anchor=".5,-.8">
       <article>
         <img class="portraitCave" src="img/portrait-cave/cave_vieux_praz.jpg"/>
         <header>CAVE DU VIEUX-PRAZ</header>
@@ -386,7 +394,7 @@
       </a>
     </div>
     <div id="listePraz" class="mapLabelDiv only_on vignerons" data-map-pos="0.5197157311485393,0.35191683345002545"
-        data-map-anchor="1.1,.8">
+        data-map-anchor=".9,1.2">
     </div>    
   </div>
 
@@ -441,6 +449,6 @@
       }, false);
     }
   </script>
--->
+ -->
 </body>
 </html>

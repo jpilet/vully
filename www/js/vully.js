@@ -5,7 +5,7 @@
 var initialMapPosition = {
   'home' : {x:0.5189310839225135,y:0.3516568495720967,scale:0.003060881448394781,vx:.5},
   'vignerons' : { x:0.5195680934607014,y:0.35197732928646386,scale:0.00040715245527878086, vx:.5 },
-  'praz' : {x:0.5197158410934367,y:0.35191649362034216,scale:0.000022728589277987155},
+  'praz' : {x:0.5197158410934367,y:0.35191649362034216,scale:0.000022728589277987155, vx: .7 },
 };
 
 // Returns an array with: full location hash, section name, section subpath.
@@ -47,6 +47,8 @@ jQuery( function($){
     
     section.addClass("selectedSection");
     previousSection.removeClass("selectedSection");
+    $(".mapLabelDiv").removeClass("hide");
+    $(".mapLabelDiv").removeClass("moreSpace");
     $(".hide_on").removeClass("hide");
     $(".hide_on." + currentSectionName()).addClass("hide");
     $(".only_on").removeClass("selectedSection");
@@ -65,7 +67,10 @@ jQuery( function($){
       $("div.navButton").removeClass("hide");
     } else {
       $("div.navButton").addClass("hide");      
+      $(".mapLabelDiv").addClass("hide");
     }
+    $('#' + currentSectionName() + "Label").removeClass("hide");    
+    $('#' + currentSectionName() + "Label").addClass("moreSpace");    
 
     // Find out where we should scroll the map.
     var l = initialMapPosition[currentSectionName()];
@@ -137,7 +142,7 @@ jQuery( function($){
       + 'data-map-pos="' + pos + '" data-map-anchor=".5,.5">'
       + '<a href="#' + id + '"><img src="img/icon-cave.png" class="mapIcon"/></a>'
       + '</div>'
-      + '<div id="' + id + 'Label" class="mapLabelDiv' + hideOn + id + '" '
+      + '<div id="' + id + 'Label" class="mapLabelDiv' + hideOn +'" '
       + 'data-map-pos="' + pos + '" data-map-anchor="' + textAnchor + '">'
       + '<a href="#' + id + '">' + caveTitle(id) + '</a>'
       + '</div>'
