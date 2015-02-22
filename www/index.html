@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
   <style>
     html { height: 100%; }
-    body {margin: 0; width: 100%; height: 100%; overflow:auto; }
+    body {margin: 0; width: 100%; min-height:100%; overflow:auto; }
     .red { background-color: #f00; }
     .homeBackgroundImage {
       /*background-image: url("img/home/home1.jpg");*/
@@ -28,11 +28,24 @@
       width:100%;
       height:35%;
     }
+    .credits {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      color:#FFFFFF;
+      display: inline-block;  
+      font-family: "AJensonProLt";
+    }
+    .credits a {
+      text-decoration: none;
+    }
   </style>
   <link rel="stylesheet" href="css/vully.css">
 </head>
 <html>
   <body class="homeBackgroundImage">
+  <div class="credits"><a href="">Nicolas Brodard</a>, <a href="http://antoinejavet.ch/">Antoine Javet</a>
+    et <a href="http://www.opticode.ch/">Julien Pilet</a></div>
   <div id="logoCentre"></div>
   <ul class="menu">
     <li><a href="vully.html">LE VULLY</a></li>
