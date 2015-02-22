@@ -78,7 +78,8 @@ h1 {
   font-size: 14pt;
   letter-spacing: 2px;
   padding-top: 40px;
-  font-weight:normal;
+  padding-bottom: 0,3px;
+  font-weight: normal;
   text-align: left;
 }
 
@@ -86,6 +87,14 @@ h2 {
   font-size: 12pt;
   text-align: left;
 }
+h3 {
+  font-family: 'AJensonProLt';
+  font-weight: normal;
+  font-size: 12pt;
+  text-align: left;
+}
+
+
 
 /* ul > li:before, ul > li:last-child:after */
 .separatorBottom:after, .separatorTop:before,
