@@ -71,10 +71,11 @@ function formatItem(entry, groupDiv) {
   
   groupDiv.append(entry.text);
   if (entry.linkedFile) {
-    groupDiv.append('<footer><a href="' + entry.linkedFile + '"><img class="iconSize2" src="img/icon-data-linked.png"/></a></footer>');
+    groupDiv.append('<footer><a href="' + entry.linkedFile + '"><img class="iconSize3" src="img/icon-data-linked.png"/></a></footer>');
   } else {
     groupDiv.append('<hr/>');
   }
+  groupDiv.append('<br/>');
 }
 
 function formatEntries(selector, entries) {
